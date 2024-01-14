@@ -1,0 +1,72 @@
+@import "/src/css/reset.css";
+
+:root {
+    --primary-font: "Poppins", sans-serif;
+    --secondary-font: "Gloria Hallelujah", cursive;
+}
+
+body {
+    background-color: rgb(203, 192, 211);
+    font-family: var(--primary-font);
+    padding-bottom: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    background-color: #432657;
+    border-radius: 4px;
+    color: #fff;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    
+    &:hover,
+    &:focus {
+        background-color: #321b41;
+    }
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    color: #432657;
+    font-family: var(--secondary-font);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.container {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-auto-rows: 200px;
+	grid-auto-flow: dense;
+
+    & img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    & .tall {
+        grid-column: span 2;
+        grid-row: span 3;
+    }
+}
