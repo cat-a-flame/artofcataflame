@@ -9,6 +9,7 @@ body {
     background-color: rgb(203, 192, 211);
     font-family: var(--primary-font);
     padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 * {
@@ -68,5 +69,10 @@ main {
     & .tall {
         grid-column: span 2;
         grid-row: span 3;
+    }
+
+    & .wide {
+        grid-column: span 3;
+        grid-row: span 2;
     }
 }
