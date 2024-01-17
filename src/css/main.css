@@ -1,32 +1,24 @@
 @import "/src/css/reset.css";
 
 :root {
-    --primary-font: "Poppins", sans-serif;
-    --secondary-font: "Gloria Hallelujah", cursive;
+    --primary-font: "Raleway", sans-serif;
+    --secondary-font: "Caprasimo", serif;
 }
 
 body {
-    background-color: rgb(203, 192, 211);
+    background-color: #fff9f3;
     font-family: var(--primary-font);
     padding-bottom: 2rem;
-    padding-top: 2rem;
+    padding-top: .5rem;
 }
+    @media screen and (min-width: 970px) {
+        body {
+            padding-top: 2rem;
+        }
+    }
 
 * {
     box-sizing: border-box;
-}
-
-a {
-    background-color: #432657;
-    border-radius: 4px;
-    color: #fff;
-    padding: .5rem 1rem;
-    text-decoration: none;
-    
-    &:hover,
-    &:focus {
-        background-color: #321b41;
-    }
 }
 
 main {
@@ -35,18 +27,82 @@ main {
 }
 
 .title {
-    color: #432657;
+    color: #518681;
     font-family: var(--secondary-font);
-    font-size: 3rem;
-    text-align: center;
+    font-size: 2rem;
 }
+    @media screen and (min-width: 970px) {
+        .title {
+            font-size: 3.5rem;
+        }
+    }
 
 .social {
     display: flex;
-    gap: 2rem;
-    margin: 2rem 0;
+    gap: 1rem;
     justify-content: center;
+
+    & a {
+        background-color: #d2931f;
+        border-radius: 100px;
+        display: flex;
+        font-size: 1.2rem;
+        color: #fff;
+        height: 40px;
+        justify-content: center;
+        place-items: center;
+        text-decoration: none;
+        width: 40px;
+        
+        &:hover,
+        &:focus {
+            background-color: #b47808;
+        }
+    }
 }
+
+.about {
+    margin: 1rem 1rem 2rem;
+}
+    @media screen and (min-width: 610px) {
+        .about {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    @media screen and (min-width: 970px) {
+        .about {
+            align-items: end;
+            margin: 1rem 2rem 4rem;
+        }
+    }
+
+.intro {
+    align-items: end;
+    display: flex;
+    flex: 0 0;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+    @media screen and (min-width: 970px) {
+        .intro {
+            gap: 2rem;
+            margin-bottom: 0;
+        }
+    }
+
+.photo {
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+    @media screen and (min-width: 970px) {
+        .photo {
+            height: 200px;
+            width: 200px;
+        }
+    }
 
 .container {
 	display: grid;
@@ -63,15 +119,16 @@ main {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 5px;
     }
+}
 
-    & .tall {
+@media screen and (min-width: 970px) {
+    .tall {
         grid-column: span 2;
         grid-row: span 3;
     }
 
-    & .wide {
+    .wide {
         grid-column: span 3;
         grid-row: span 2;
     }
