@@ -1,4 +1,4 @@
-@import "/src/css/reset.css";
+@import "reset.css";
 
 :root {
     --primary-font: "Raleway", sans-serif;
@@ -132,4 +132,33 @@ main {
         grid-column: span 3;
         grid-row: span 2;
     }
+}
+
+.navigation {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+
+    & ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    & a {
+        color: #518681;
+        font-weight: 600;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.about-page {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 70ch;
+    text-align: center;
 }
