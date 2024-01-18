@@ -1,4 +1,4 @@
-@import "reset.css";
+@import "/src/css/reset.css";
 
 :root {
     --primary-font: "Raleway", sans-serif;
