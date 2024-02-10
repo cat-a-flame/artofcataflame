@@ -1,0 +1,49 @@
+{
+    "items": [
+        {
+            "name": "Astronaut cat bookmark",
+            "img": "/src/images/shop/bookmark.jpg",
+            "url": "https://stefaniesparkles.etsy.com/listing/1649693267"
+        },
+        {
+            "name": "Shopping list",
+            "img": "/src/images/shop/shopping_list.jpg",
+            "url": "https://stefaniesparkles.etsy.com/listing/1659843318"
+        },
+        {
+            "name": "Astronaut cat vinyl sticker",
+            "img": "/src/images/shop/astrocat_sticker.jpg",
+            "url": "https://stefaniesparkles.etsy.com/listing/1644803684"
+        },
+        {
+            "name": "Whimsical sticker sheet",
+            "img": "/src/images/shop/whimsical_stickersheet.jpg",
+            "url": "https://stefaniesparkles.etsy.com/listing/1644815874"
+        },
+        {
+            "name": "Dachshund birthday greeting card",
+            "img": "/src/images/shop/card_birthday.jpg",
+            "url": "https://stefaniesparkles.etsy.com/listing/1651225416"
+        },
+        {
+            "name": "Cute Valentine's day card",
+            "img": "/src/images/shop/card_love.jpg",
+            "url": "https://stefaniesparkles.etsy.com/listing/1665396297"
+        },
+        {
+            "name": "Cassette tape Valentine's day card",
+            "img": "/src/images/shop/card_retro.jpg",
+            "url": "https://stefaniesparkles.etsy.com/listing/1665388647"
+        },
+        {
+            "name": "Raccoon illustration art print",
+            "img": "/src/images/shop/racoon_print.jpg",
+            "url": "https://stefaniesparkles.etsy.com/listing/1637245517"
+        },
+        {
+            "name": "Cottage art print",
+            "img": "/src/images/shop/cottage_print.jpg",
+            "url": "https://stefaniesparkles.etsy.com/listing/1623049380"
+        }
+    ]
+}
