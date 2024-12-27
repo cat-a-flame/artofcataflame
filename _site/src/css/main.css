@@ -66,6 +66,10 @@ main {
             color: #2b2926;
             text-decoration: underline;
         }
+
+        &.active {
+            color: #993C2B;
+        }
     }
 }
 
