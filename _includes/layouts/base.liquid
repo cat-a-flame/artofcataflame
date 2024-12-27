@@ -38,7 +38,7 @@ baseURL: https://artofcatafla.me
         <meta name="p:domain_verify" content="b473502d4d1cfade71cff4cc48d7c0b6"/>
     </head>
     <body>
-        <header class="site-header">
+        <header class="site-header" id="siteHeader">
             <div class="about">
                 <a class="intro" href="/">
                     <img class="photo" src="/src/images/cataflame_logo.png" alt="Logo of Cataflame" />
@@ -73,10 +73,16 @@ baseURL: https://artofcatafla.me
                     <i class="fa-brands fa-bluesky"></i>
                 </a>
             </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars" id="menuIcon"></i>
+            </button>
         </header>
 
         <main>
             {{ content }}
         </main>
+
+        <script src="/src/js/main.js"></script>
     </body>
 </html>

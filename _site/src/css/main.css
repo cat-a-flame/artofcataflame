@@ -26,23 +26,73 @@ main {
     padding-top: 2rem;
     padding-right: 2.5rem;
     padding-bottom: 2.5rem;
-    padding-left: 19rem;
+    padding-left: 2.5rem;
     max-width: 1440px;
 }
+    @media (min-width: 840px) {
+        main {
+            padding-left: 19rem;
+        }
+    }
 
 .site-header {
     background: #f7eee1;
     bottom: 0;
-    box-sizing: content-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    left: 0;
+    left: -100%;
     padding: 1rem 2.5rem 2.5rem;
     position: fixed;
     top: 0;
-    width: 180px;
+    width: 100%;
+    transition: left 0.3s ease;
+    z-index: 10;
 }
+    @media (min-width: 840px) {
+        .site-header {
+            background: #f7eee1;
+            bottom: 0;
+            box-sizing: content-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            left: 0;
+            padding: 1rem 2.5rem 2.5rem;
+            position: fixed;
+            top: 0;
+            width: 180px;
+        }
+    }
+
+.site-header.open {
+    left: 0;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #504D48;
+    cursor: pointer;
+    display: none;
+    font-size: 1.5rem;
+}
+
+    @media (max-width: 840px) {
+        .menu-toggle {
+            display: block;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 11;
+        }
+
+
+        .navigation li {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+    }
 
 .description {
     font-family: var(--secondary-font);
@@ -52,10 +102,6 @@ main {
 .navigation {
     font-family: titleFont;
     margin-top: 1.75rem;
-
-    & li:not(:last-of-type) {
-        margin-bottom: 1rem;
-    }
 
     & a {
         color: #504D48;
@@ -73,13 +119,19 @@ main {
     }
 }
 
+    @media (min-width: 840px) {
+        .navigation li:not(:last-of-type) {
+            margin-bottom: 1rem;
+        }
+    }
+
 .social {
     display: flex;
     gap: 1.4rem;
     justify-content: start;
 
     & a {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         color: #726054;
         text-decoration: none;
         
@@ -90,12 +142,18 @@ main {
     }
 }
 
+@media screen and (min-width: 840px) {
+    .social a {
+        font-size: 1.3rem;
+    }
+}
+
 .photo {
     border-radius: 100%;
-    height: 120px;
-    width: 120px;
+    height: 160px;
+    width: 160px;
 }
-    @media screen and (min-width: 970px) {
+    @media screen and (min-width: 840px) {
         .photo {
             height: 180px;
             width: 180px;
@@ -165,6 +223,18 @@ p {
         max-width: 100%;
     }
 }
+
+    @media (max-width: 489px) {
+        .collage li {
+            flex: 1 1 100%;
+        }
+    }
+
+    @media (min-width: 490px) and (max-width: 839px) {
+        .collage li {
+            flex: 1 1 calc(100%/3);
+        }
+    }
 
 .image-description {
     font-size: .8rem;
