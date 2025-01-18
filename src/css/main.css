@@ -1,7 +1,7 @@
 @import "/src/css/reset.css";
 
 :root {
-    --primary-font: "Lato", serif;
+    --primary-font: "Quicksand", serif;
     --brand-color: #993C2B;
 }
 
@@ -16,6 +16,8 @@ body {
     color: #504d48;
     font-family: var(--primary-font);
     font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
 }
 
 * {
@@ -94,6 +96,10 @@ main {
         }
     }
 
+.content-wrapper {
+    max-width: 60ch;
+}
+
 .description {
     font-family: var(--secondary-font);
     font-size: 1rem;
@@ -121,7 +127,7 @@ main {
 
     @media (min-width: 840px) {
         .navigation li:not(:last-of-type) {
-            margin-bottom: 1rem;
+            margin-bottom: .7rem;
         }
     }
 
@@ -194,16 +200,72 @@ p {
     line-height: 1.4;
     max-width: 60ch;
 
-    &:not(:last-of-type) {
-        margin-bottom: 1rem;
+    &:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+strong {
+    font-weight: 700;
+}
+
+.list {
+    list-style: disc;
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
+
+    & li {
+        margin-bottom: .5rem;
+    }
+}
+
+.link {
+    color: var(--brand-color);
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
     }
 }
 
 .subtitle {
     color: var(--brand-color);
     font-family: titleFont;
-    font-size: 1.75rem;
+    font-size: 1.85rem;
     margin-bottom: 1.5rem;
+
+    &.has-margin {
+        margin-top: 2rem;
+    }
+}
+
+.category-title {
+    align-items: center;
+    color: var(--brand-color);
+    cursor: pointer;
+    display: flex;
+    font-family: titleFont;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+    margin-top: 1.5rem;
+
+    &::after {
+        background-image: url("/src/images/arrow.svg");
+        background-size: contain;
+        content: '';
+        height: 8px;
+        margin-left: .5em;
+        transition: 0.2s;
+        transform: rotate(-90deg);
+        width: 15px;
+      }
+      
+    }
+
+details[open] > summary::after {
+    transform: rotate(0);
 }
 
 /* ABOUT */
