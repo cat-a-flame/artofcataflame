@@ -1,7 +1,7 @@
 <div class="portfolio">
     {% for image in portfolioImages %}
     <a href="{{ image.src }}" class="portfolio-link">
-        {% image image.src, image.name, [300] %}
+        {% image image.filePath, image.name, [300] %}
     </a>
     {% endfor %}
 </div>

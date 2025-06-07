@@ -7,6 +7,7 @@ module.exports = () => {
     .filter(file => /\.(jpe?g|png|gif)$/i.test(file))
     .map(file => ({
       src: `/src/images/illustrations/${file}`,
+      filePath: path.join(dir, file),
       name: path.parse(file).name
     }));
 };
