@@ -168,10 +168,14 @@ main {
 
 .portfolio {
 	display: grid;
-	grid-gap: 10px;
+	grid-gap: 12px;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-auto-rows: 200px;
 	grid-auto-flow: dense;
+
+    & picuture {
+        display: block;
+    }
 
     & img {
         max-width: 100%;
@@ -181,12 +185,6 @@ main {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
-
-    & a {
-        display: block;
-        width: 100%;
-        height: 100%;
     }
 }
 

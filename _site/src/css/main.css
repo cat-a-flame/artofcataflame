@@ -168,10 +168,14 @@ main {
 
 .portfolio {
 	display: grid;
-	grid-gap: 10px;
+	grid-gap: 12px;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-auto-rows: 200px;
 	grid-auto-flow: dense;
+
+    & picuture {
+        display: block;
+    }
 
     & img {
         max-width: 100%;
@@ -374,4 +378,44 @@ details[open] > summary::after {
     &:focus {
         background-color: #62333c;
     }
+}
+
+/* Lightbox styles */
+.lightbox {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    animation: fadeIn 0.3s;
+}
+
+.lightbox.visible {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
