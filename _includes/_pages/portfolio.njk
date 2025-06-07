@@ -1,27 +1,12 @@
 <div class="portfolio">
-    <div class="tall"><img src="/src/images/illustrations/Avas3.jpg" alt="" /></div>
-    <div><img src="/src/images/illustrations/Breathe.jpg" alt="" /></div>
-    <div><img src="/src/images/illustrations/Cabin.png" alt="" /></div>
-    <div><img src="/src/images/illustrations/Car.png" alt="" /></div>
-    <div><img src="/src/images/illustrations/Carrot.png" alt="" /></div>
-    <div><img src="/src/images/illustrations/Christmas.jpg" alt="" /></div>
-    <div><img src="/src/images/illustrations/Cocoa-pumpkin.jpg" alt="" /></div>
-    <div class="tall"><img src="/src/images/illustrations/Fox.png" alt="" /></div>
-    <div><img src="/src/images/illustrations/Cottage 2.png" alt="" /></div>
-    <div><img src="/src/images/illustrations/December.jpg" alt="" /></div>
-    <div><img src="/src/images/illustrations/Fox.jpg" alt="" /></div>
-    <div><img src="/src/images/illustrations/Goose.png" alt="" /></div>
-    <div><img src="/src/images/illustrations/Greenhouse.png" alt="" /></div>
-    <div><img src="/src/images/illustrations/Hearth.jpg" alt="" /></div>
-    <div><img src="/src/images/illustrations/Love.png" alt="" /></div>
-    <div class="wide"><img src="/src/images/illustrations/mews4.png" alt="" /></div>
-    <div><img src="/src/images/illustrations/Mouse.jpg" alt="" /></div>
-    <div><img src="/src/images/illustrations/Mushroom_house.jpg" alt="" /></div>
-    <div><img src="/src/images/illustrations/Music.jpg" alt="" /></div>
-    <div><img src="/src/images/illustrations/Ornament.jpg" alt="" /></div>
-    <div><img src="/src/images/illustrations/Plants.png" alt="" /></div>
-    <div><img src="/src/images/illustrations/Robin.jpg" alt="" /></div>
-    <div><img src="/src/images/illustrations/Skull.jpg" alt="" /></div>
-    <div><img src="/src/images/illustrations/Spirit.jpg" alt="" /></div>
-    <div><img src="/src/images/illustrations/Spring.png" alt="" /></div>
+    {% for image in portfolioImages %}
+    <a href="{{ image.src }}" class="portfolio-link">
+        {% image image.src, image.name, [300] %}
+    </a>
+    {% endfor %}
+</div>
+
+<div id="lightbox" class="lightbox">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
 </div>
