@@ -3,99 +3,118 @@ baseURL: https://artofcatafla.me
 ---
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Art of Cataflame</title>
 
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link rel="icon" type="image/png" sizes="16x16" href="/src/images/favicon.png">
-        <meta name="author" content="Stefánia Péter"/>
-        <meta name="description" content="Art of Stefánia Péter"/>
+<head>
+    <meta charset="utf-8">
+    <title>Stefánia Péter Illustration | Art of Cataflame</title>
 
-        
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQS6LVYFX1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-RQS6LVYFX1');
-        </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/images/favicon.png">
+    <meta name="author" content="Stefánia Péter" />
+    <meta name="description" content="Stefánia Péter Illustration" />
 
 
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="@artofcataflame">
-        <meta name="twitter:creator" content="@artofcataflame">
-        <meta name="twitter:title" content="Art of Stefánia Péter">
-        <meta name="twitter:description" content="Freelance artist">
-        <meta name="twitter:image" content="{{baseURL}}/src/images/social.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQS6LVYFX1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-        <!-- Open Graph -->
-        <meta property="og:title" content="Art of Stefánia Péter">
-        <meta property="og:description" content="Freelance artist">
-        <meta property="og:image" content="{{baseURL}}/src/images/social.png">
-        <meta property="og:url" content="https://artofcatafla.me">
-        <meta property="og:site_name" content="Art of Stefánia Péter">
-        <meta property="og:locale" content="en_GB">
-        <meta property="og:type" content="website">
-        
-        <link rel="stylesheet" href="/src/css/main.css">
-        <script src="https://kit.fontawesome.com/cd9ec28620.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        gtag('config', 'G-RQS6LVYFX1');
+    </script>
 
-        <meta name="p:domain_verify" content="b473502d4d1cfade71cff4cc48d7c0b6"/>
-    </head>
-    <body>
-        <header class="site-header" id="siteHeader">
-            <div class="about">
-                <a class="intro" href="/">
-                    <img class="photo" src="/src/images/cataflame_logo.png" alt="Logo of Cataflame" />
-                </a>
-                
-                <p class="description">Stefánia Péter is an illustrator from Hungary.</p>
 
-                <nav class="navigation">
-                    <ul>
-                        <li><a href="/" class="{% if page.url == '/' %}active{% endif %}">Illustrations</a></li>
-                        <li><a href="/about" class="{% if page.url == '/about/' %}active{% endif %}">About</a></li>
-                        <li><a href="/contact" class="{% if page.url == '/contact/' %}active{% endif %}">Contact</a></li>
-                        <li><a href="https://artofcataflame.etsy.com" target="_blank">Shop ⇾</a></li>
-                        <li><a href="/gpsr-product-safety-information/">Product safety information</a></li>
-                    </ul>
-                </nav>
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@artofcataflame">
+    <meta name="twitter:creator" content="@artofcataflame">
+    <meta name="twitter:title" content="Stefánia Péter Illustration">
+    <meta name="twitter:description" content="Freelance illustrator">
+    <meta name="twitter:image" content="{{baseURL}}/src/images/social.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Stefánia Péter Illustration">
+    <meta property="og:description" content="Freelance illustrator">
+    <meta property="og:image" content="{{baseURL}}/src/images/social.png">
+    <meta property="og:url" content="https://artofcatafla.me">
+    <meta property="og:site_name" content="Stefánia Péter Illustration">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="/src/css/main.css">
+    <script src="https://kit.fontawesome.com/cd9ec28620.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+    <meta name="p:domain_verify" content="b473502d4d1cfade71cff4cc48d7c0b6" />
+</head>
+
+<body>
+    <header class="site-header" id="siteHeader">
+        <div class="about">
+            <a class="intro" href="/">
+                <img class="photo" src="/src/images/logo.jpg" alt="Logo of Cataflame" />
+            </a>
+
+            <h1 class="description">Stefánia Péter<br>Illustration</h1>
+        </div>
+
+        <div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="/" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
+                    <li><a href="/about" class="{% if page.url == '/about/' %}active{% endif %}">About</a></li>
+                    <li><a href="/contact" class="{% if page.url == '/contact/' %}active{% endif %}">Contact</a></li>
+                    <li><a href="https://artofcataflame.etsy.com" target="_blank">Etsy shop ⇾</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/gpsr-product-safety-information/">Product safety information</a>
             </div>
 
+
             <div class="social">
-                <a href="https://www.instagram.com/artofcataflame/" target="_blank" class="button" title="Instagram profile">
+                <a href="https://www.instagram.com/artofcataflame/" target="_blank" class="button"
+                    title="Instagram profile">
                     <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.tiktok.com/@artofcataflame" target="_blank" class="button"
+                    title="Tiktok profile">
+                    <i class="fa-brands fa-tiktok"></i>
                 </a>
 
                 <a href="https://www.threads.net/@artofcataflame" target="_blank" class="button" title="Threads profile">
                     <i class="fa-brands fa-threads"></i>
                 </a>
 
-                <a href="https://www.pinterest.com/artofcataflame/" target="_blank" class="button" title="Pinterest profile">
+                <a href="https://www.pinterest.com/artofcataflame/" target="_blank" class="button"
+                    title="Pinterest profile">
                     <i class="fa-brands fa-pinterest-p"></i>
                 </a>
 
-                <a href="https://bsky.app/profile/artofcataflame.bsky.social" target="_blank" class="button" title="Bluesky profile">
+                <a href="https://bsky.app/profile/artofcataflame.bsky.social" target="_blank" class="button"
+                    title="Bluesky profile">
                     <i class="fa-brands fa-bluesky"></i>
                 </a>
             </div>
-            
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars" id="menuIcon"></i>
-            </button>
-        </header>
+        </div>
 
-        <main>
-            {{ content }}
-        </main>
+       <p> ​All rights reserved &copy; 2025 Stefánia Péter</p>
+    </footer>
 
-        <script src="/src/js/main.js"></script>
-    </body>
+    <script src="/src/js/main.js"></script>
+</body>
+
 </html>
