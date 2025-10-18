@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Arrival Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Comfortaa:wght@300..700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #fff;
+            color: #6b4077;
+            font-family: "Comfortaa", sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.5;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: 700;
+            font-size: .8rem;
+        }
+
+        input,
+        select {
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            width: 100%;
+            border: 1px solid #a67db1;
+            font-family: "Comfortaa", sans-serif;
+            font-weight: 700;
+            border-radius: 6px;
+        }
+
+        select {
+            background-color: #fff;
+        }
+
+        button {
+            margin-top: 1.5rem;
+            padding: 0.7rem 1.2rem;
+            border: none;
+            background: #6b4077;
+            color: white;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #794986;
+        }
+
+        button:active {
+            background: rgb(107, 64, 119);
+        }
+
+        #result {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #6b4077;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Order Arrival Calculator</h1>
+
+    <label for="shipDate">Shipping date</label>
+    <input type="date" id="shipDate" />
+
+    <label for="destination">Destination</label>
+    <select id="destination">
+        <option value="">-- Select destination --</option>
+        <option value="HU">Hungary</option>
+        <option value="EU">EU</option>
+        <option value="UK">UK</option>
+        <option value="US">USA</option>
+        <option value="AU">Australia</option>
+    </select>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result"></div>
+
+    <script>
+        const shippingTimes = {
+            HU: 2,
+            EU: 7,
+            UK: 12,
+            US: 30,
+            AU: 35,
+        };
+
+        function addBusinessDays(startDate, daysToAdd) {
+            let date = new Date(startDate);
+            let addedDays = 0;
+
+            while (addedDays < daysToAdd) {
+                date.setDate(date.getDate() + 1);
+                const day = date.getDay();
+                // Skip weekends (0 = Sunday, 6 = Saturday)
+                if (day !== 0 && day !== 6) {
+                    addedDays++;
+                }
+            }
+            return date;
+        }
+
+        document.getElementById("calculate").addEventListener("click", () => {
+            const shipDate = document.getElementById("shipDate").value;
+            const destination = document.getElementById("destination").value;
+            const resultDiv = document.getElementById("result");
+
+            if (!shipDate || !destination) {
+                resultDiv.textContent = "Please select both fields.";
+                return;
+            }
+
+            const days = shippingTimes[destination];
+            const arrival = addBusinessDays(shipDate, days);
+            const formatted = arrival.toLocaleDateString(undefined, {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            });
+
+            resultDiv.textContent = `📦 Expected arrival: ${formatted}`;
+        });
+    </script>
+</body>
+
+</html>
